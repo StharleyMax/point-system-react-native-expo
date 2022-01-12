@@ -1,35 +1,48 @@
-import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 
 export function Login() {
   return (
-    <View>
-      <StatusBar backgroundColor="#FFF" translucent={false} />
-        <Text>PointSystem</Text>
+    <View style={styles.container}>
+        <Image
+          source={require('./../assets/logo.png')}
+          style={styles.logo}
+        />
 
-        <View>
         <TextInput
           placeholder="Login"
-          //style={styles.input}
+          style={styles.input}
         />
 
         <TextInput
           placeholder="Sua Senha"
-          //style={styles.input}
+          style={styles.input}
         />
 
-        <TouchableOpacity>
+        <TouchableOpacity style={styles.loginButton}>
           <Text>Acessar</Text>
         </TouchableOpacity>
 
-        </View>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#ffffff'
-  }
+    backgroundColor: '#3E4452',
+    alignItems: 'center',
+    height: '100%',
+    },
+  logo:{
+    marginTop: '30%',
+  },
+  input:{
+    width: 300,
+    height: 42,
+    borderBottomWidth: 1,
+    borderBottomColor: '#B4AD87',
+    marginTop: 35,
+    fontFamily: ''
+  },
+  loginButton:{}
 })
